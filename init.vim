@@ -1,9 +1,34 @@
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'scss.css'] }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'markdown'] }
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'rhysd/clever-f.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
+Plug 'slime-lang/vim-slime-syntax', { 'for': 'slime' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+
+call plug#end()
+
+
+
+
+set backupdir=~/.local/share/nvim/tmp   "set backup directory
 set backup             " keep a backup file (restore to previous version)
-set backupdir=~/.local/share/nvim/tmp
 set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
 set showcmd            " display incomplete commands
-set clipboard+=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed
+set clipboard+=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed.
 
 " Nicer split navigation
 nnoremap <C-h> <C-w>h
