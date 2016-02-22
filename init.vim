@@ -27,6 +27,7 @@ set backupdir=~/.local/share/nvim/tmp   "set backup directory
 set backup             " keep a backup file (restore to previous version)
 set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
+set number             " show line numbers
 set showcmd            " display incomplete commands
 set clipboard+=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed.
 
