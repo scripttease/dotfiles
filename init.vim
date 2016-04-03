@@ -3,10 +3,12 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'scss.css'] }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'markdown'] }
+Plug 'honza/vim-snippets'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'rhysd/clever-f.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'sirver/ultisnips'
 Plug 'slim-template/vim-slim'
 Plug 'slime-lang/vim-slime-syntax', { 'for': 'slime' }
 Plug 'tpope/vim-commentary'
@@ -92,3 +94,8 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis
                  \ | wincmd p | diffthis
 endif
+
+let g:snips_author="Alice Dee"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
