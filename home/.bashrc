@@ -83,12 +83,10 @@ fi
 
 eval "$(rbenv init -)"
 
-# Added by Canopy installer on 2016-02-03
-# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-VIRTUAL_ENV_DISABLE_PROMPT=1 source '/home/alice/Enthought/Canopy_32bit/User/bin/activate'
+##########
+#  PATH  #
+##########
 
-VIRTUAL_ENV_DISABLE_PROMPT=1 source '/home/alice/Enthought/Canopy_32bit/User/bin/activate'
-
-### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=$HOME/bin:$PATH
+export PATH="$HOME/.homesick/repos/homeshick/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
