@@ -83,6 +83,8 @@ fi
 
 eval "$(rbenv init -)"
 
+export EDITOR=nvim
+
 ##########
 #  PATH  #
 ##########
