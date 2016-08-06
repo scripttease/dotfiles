@@ -66,6 +66,9 @@ alias l='ls -CF'
 alias be='bundle exec'
 alias ber='bundle exec rake'
 
+# Docker aliases
+alias docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -85,6 +88,11 @@ eval "$(rbenv init -)"
 
 export EDITOR=nvim
 
+# Postgres client config
+
+export PGHOST=localhost
+export PGUSER=postgres
+
 ##########
 #  PATH  #
 ##########
@@ -92,3 +100,8 @@ export EDITOR=nvim
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.homesick/repos/homeshick/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$PATH
