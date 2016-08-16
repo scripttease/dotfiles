@@ -98,10 +98,6 @@ export PGUSER=postgres
 ##########
 
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/bin/node-dir/bin:$PATH"
 export PATH="$HOME/.homesick/repos/homeshick/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/bin:$PATH
