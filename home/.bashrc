@@ -87,6 +87,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Start autojump on Debian
+if [ -f "/usr/share/autojump/autojump.sh" ]; then
+  source /usr/share/autojump/autojump.sh
+fi
+
 eval "$(rbenv init -)"
 
 export EDITOR=nvim
