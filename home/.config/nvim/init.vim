@@ -48,8 +48,9 @@ tnoremap <Esc> <C-\><C-n>
 
 " Improve up/down movement on wrapped lines
 nnoremap j gj
-nnoremap k gkset expandtab
+nnoremap k gk
 
+set expandtab
 set nojoinspaces
 set shiftwidth=2
 set softtabstop=2
