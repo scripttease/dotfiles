@@ -62,9 +62,12 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias n='nvim'
 
 alias be='bundle exec'
 alias ber='bundle exec rake'
+alias berc='bundle exec rails console'
+alias beg='bundle exec guard'
 
 # Docker aliases
 alias docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"

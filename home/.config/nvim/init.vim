@@ -43,9 +43,13 @@ nnoremap <C-down> <C-w>j
 nnoremap <C-up> <C-w>k
 nnoremap <C-right> <C-w>l
 
+" Use ESC as ESC in term mode
 tnoremap <Esc> <C-\><C-n>
 
-set expandtab
+" Improve up/down movement on wrapped lines
+nnoremap j gj
+nnoremap k gkset expandtab
+
 set nojoinspaces
 set shiftwidth=2
 set softtabstop=2
@@ -72,6 +76,7 @@ filetype plugin indent on
 augroup vimrcEx
   autocmd!
 
+
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
 
@@ -86,6 +91,14 @@ augroup vimrcEx
     \ endif
 
 augroup END
+
+augroup focus
+  au!
+  " Should auto save on focus change.
+  au TabLeave * silent! wall
+  au FocusLost * silent! wall
+augroup END
+set autowriteall
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
