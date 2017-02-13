@@ -46,6 +46,31 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Displays git repo status info
+source ~/.git_prompt.sh
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+build_ps1() {
+  # Green default prompt
+  local color='\[\e[1;32m\]'
+  local host=''
+
+  # If ssh, yellow prompt, include host name
+  [[ $SSH_TTY ]] && color='\[\e[1;33m\]'
+  [[ $SSH_TTY ]] && host="@$HOSTNAME"
+
+  # If root, red prompt
+  [[ $UID -eq 0 ]] && color='\[\e[1;31m\]'
+
+  # Build
+  local part1="${color}\u${host} "
+  local part2="\[\e[1;34m\]\w${color}"
+  local part3='$(__git_ps1 " [%s]") \[\e[m\]\$'
+  echo $part1$part2$part3' '
+}
+PS1=$(build_ps1)
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -76,6 +101,8 @@ alias docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# pop up server
+alias serve='echo "ruby -run -e httpd . -p 4000" && ruby -run -e httpd . -p 4000'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

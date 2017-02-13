@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'scss.css'] }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'markdown'] }
+Plug 'elmcast/elm-vim'
 Plug 'honza/vim-snippets'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'rhysd/clever-f.vim'
@@ -49,6 +50,14 @@ tnoremap <Esc> <C-\><C-n>
 " Improve up/down movement on wrapped lines
 nnoremap j gj
 nnoremap k gk
+nnoremap <Up> gk
+nnoremap <Down> gj
+vnoremap j gj
+vnoremap k gk
+vnoremap <Up> gk
+vnoremap <Down> gj
+inoremap <Up> <Esc>gki
+inoremap <Down> <Esc>gji
 
 set expandtab
 set nojoinspaces
