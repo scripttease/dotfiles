@@ -20,6 +20,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+
 
 call plug#end()
 
@@ -122,3 +124,9 @@ let g:snips_author="Alice Dee"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+function! RubocopThisFile()
+  :! rubocop -aD %
+endfunction
+
+command! RubocopThisFile call RubocopThisFile()
