@@ -133,3 +133,8 @@ command! RubocopThisFile call RubocopThisFile()
 
 " Enables JS mocha snippets
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-mocha
+
+" Allows node modules etc to be ignored during search
+let g:ctrlp_custom_ignore = {
+ \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules|_build|elm-stuff|coverage|deps|tmp)$',
+ \ }
