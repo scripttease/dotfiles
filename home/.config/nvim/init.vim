@@ -130,3 +130,6 @@ function! RubocopThisFile()
 endfunction
 
 command! RubocopThisFile call RubocopThisFile()
+
+" Enables JS mocha snippets
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-mocha
