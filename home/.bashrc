@@ -95,7 +95,7 @@ alias berc='bundle exec rails console'
 alias beg='bundle exec guard'
 
 # Docker aliases
-alias docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"
+alias get-docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
