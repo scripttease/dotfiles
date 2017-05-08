@@ -119,7 +119,10 @@ if [ -f "/usr/share/autojump/autojump.sh" ]; then
   source /usr/share/autojump/autojump.sh
 fi
 
-eval "$(rbenv init -)"
+# Ruby rbenv version manager
+if [ -d "$HOME/.rbenv" ]; then
+  eval "$("$HOME"/.rbenv/bin/rbenv init -)"
+fi
 
 export EDITOR=nvim
 

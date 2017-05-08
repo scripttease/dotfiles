@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'scss.css'] }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'markdown'] }
 Plug 'elmcast/elm-vim'
 Plug 'honza/vim-snippets'
@@ -15,12 +16,12 @@ Plug 'slime-lang/vim-slime-syntax', { 'for': 'slime' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 
 
 call plug#end()
