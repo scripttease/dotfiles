@@ -24,6 +24,9 @@ alias berc 'bundle exec rails console'
 alias beg 'bundle exec guard'
 alias serve 'ruby -run -e httpd . -p 4000'
 alias get-docker-postgres "docker run -t -d -p 5432:5432 --name postgres postgres"
+alias g 'git'
+alias ga 'git add --all; and git status'
+alias gs 'git status'
 
 # Autojump
 if test -e /usr/local/share/autojump/autojump.fish
