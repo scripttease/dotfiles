@@ -1,8 +1,11 @@
 [user]
   name = Alice Dee
-	email = alice.dee@guardian.co.uk
+  email = alice.dee@guardian.co.uk
+[core]
+  excludesfile = ~/.gitignore
+
 [push]
-	default = simple
+  default = simple
 [alias]
   br = branch
   ci = commit
