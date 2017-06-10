@@ -47,6 +47,11 @@ nnoremap <C-down> <C-w>j
 nnoremap <C-up> <C-w>k
 nnoremap <C-right> <C-w>l
 
+" Nicer tab navigation
+
+nnoremap <S-left> <Esc>:tabprev<CR>
+nnoremap <S-right> <Esc>:tabnext<CR>
+
 " Use ESC as ESC in term mode
 tnoremap <Esc> <C-\><C-n>
 
