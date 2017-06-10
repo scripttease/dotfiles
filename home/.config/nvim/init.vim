@@ -26,8 +26,8 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
-
-
+" allow mouse scroll to work
+set mouse=a
 
 set backupdir=~/.local/share/nvim/tmp   "set backup directory
 set backup             " keep a backup file (restore to previous version)
