@@ -22,6 +22,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'sbdchd/neoformat'
 
 
 call plug#end()
@@ -48,9 +49,10 @@ nnoremap <C-up> <C-w>k
 nnoremap <C-right> <C-w>l
 
 " Nicer tab navigation
-
-nnoremap <S-left> <Esc>:tabprev<CR>
-nnoremap <S-right> <Esc>:tabnext<CR>
+nnoremap <S-left> gT
+nnoremap <S-right> gt
+inoremap <S-left> <Esc>:tabprev<CR>
+inoremap <S-right> <Esc>:tabnext<CR>
 
 " Use ESC as ESC in term mode
 tnoremap <Esc> <C-\><C-n>
@@ -66,6 +68,9 @@ vnoremap <Up> gk
 vnoremap <Down> gj
 inoremap <Up> <Esc>gki
 inoremap <Down> <Esc>gji
+
+" Have Y  behave like D, C, etc (until end of line, not entire line)
+nnoremap Y y$
 
 set expandtab
 set nojoinspaces
@@ -144,3 +149,6 @@ autocmd FileType javascript UltiSnipsAddFiletypes javascript-mocha
 let g:ctrlp_custom_ignore = {
  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules|_build|elm-stuff|coverage|deps|tmp)$',
  \ }
+
+" Go pretty
+nnoremap gp :Neoformat<CR>

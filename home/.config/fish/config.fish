@@ -69,3 +69,4 @@ function fish_prompt -d "Write out the prompt"
     printf " %s✘ %s\$ %s" (set_color -o red) (set_color grey) (set_color normal)
   end
 end
+set -g fish_user_paths "/usr/local/opt/elasticsearch@2.4/bin" $fish_user_paths
