@@ -10,6 +10,7 @@ set --export PGUSER postgres
 set fish_user_paths \
   "$GOPATH/bin" \
   "$HOME/.homesick/repos/homeshick/bin" \
+  "$HOME/.cargo/bin" \
   "$HOME/.rbenv/bin"
 
 # Aliases
@@ -33,11 +34,9 @@ if test -e /usr/local/share/autojump/autojump.fish
   source /usr/local/share/autojump/autojump.fish
 end
 
-# rbenv ruby version manager
-if test -e $HOME/.rbenv/bin/rbenv
-  set PATH $HOME/.rbenv/bin $PATH
-  set PATH $HOME/.rbenv/shims $PATH
-  rbenv rehash >/dev/null ^&1
+# asdf version manager
+if test -e $HOME/.asdf/asdf.fish
+  source $HOME/.asdf/asdf.fish
 end
 
 # Hub
@@ -69,4 +68,3 @@ function fish_prompt -d "Write out the prompt"
     printf " %s✘ %s\$ %s" (set_color -o red) (set_color grey) (set_color normal)
   end
 end
-set -g fish_user_paths "/usr/local/opt/elasticsearch@2.4/bin" $fish_user_paths

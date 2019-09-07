@@ -23,6 +23,7 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'sbdchd/neoformat'
+Plug 'gleam-lang/gleam.vim'
 
 
 call plug#end()
@@ -30,13 +31,18 @@ call plug#end()
 " allow mouse scroll to work
 set mouse=a
 
+" to set backup directory on new install, mkdir -p ~/.local/share/nvim/tmp
 set backupdir=~/.local/share/nvim/tmp   "set backup directory
+
 set backup             " keep a backup file (restore to previous version)
 set undofile           " keep an undo file (undo changes after closing)
 set ruler              " show the cursor position all the time
 set number             " show line numbers
 set showcmd            " display incomplete commands
 set clipboard+=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed.
+
+" Faster keypattern to move between open and close braces
+nnoremap % ~
 
 " Nicer split navigation
 nnoremap <C-h> <C-w>h
@@ -47,12 +53,6 @@ nnoremap <C-left> <C-w>h
 nnoremap <C-down> <C-w>j
 nnoremap <C-up> <C-w>k
 nnoremap <C-right> <C-w>l
-
-" Nicer tab navigation
-nnoremap <S-left> gT
-nnoremap <S-right> gt
-inoremap <S-left> <Esc>:tabprev<CR>
-inoremap <S-right> <Esc>:tabnext<CR>
 
 " Use ESC as ESC in term mode
 tnoremap <Esc> <C-\><C-n>
@@ -69,7 +69,7 @@ vnoremap <Down> gj
 inoremap <Up> <Esc>gki
 inoremap <Down> <Esc>gji
 
-" Have Y  behave like D, C, etc (until end of line, not entire line)
+" Have Y  behave like D, C, etc (UNTil end of line, not entire line)
 nnoremap Y y$
 
 set expandtab
@@ -152,3 +152,10 @@ let g:ctrlp_custom_ignore = {
 
 " Go pretty
 nnoremap gp :Neoformat<CR>
+
+" Nicer tab navigation
+nnoremap <S-left> gT
+nnoremap <S-right> gt
+inoremap <S-left> <Esc>:tabprev<CR>
+inoremap <S-right> <Esc>:tabnext<CR>
+

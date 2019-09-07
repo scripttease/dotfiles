@@ -119,9 +119,9 @@ if [ -f "/usr/share/autojump/autojump.sh" ]; then
   source /usr/share/autojump/autojump.sh
 fi
 
-# Ruby rbenv version manager
-if [ -d "$HOME/.rbenv" ]; then
-  eval "$("$HOME"/.rbenv/bin/rbenv init -)"
+# asdf version manager
+if [ -d "$HOME/.asdf/asdf.sh" ]; then
+  source "$HOME/.asdf/asdf.sh"
 fi
 
 export EDITOR=nvim
@@ -143,3 +143,9 @@ export PATH="$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
+
+# exec fish
+
