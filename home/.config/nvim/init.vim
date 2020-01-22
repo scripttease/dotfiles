@@ -24,6 +24,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'sbdchd/neoformat'
 Plug 'gleam-lang/gleam.vim'
+Plug 'mustache/vim-mustache-handlebars'
 
 
 call plug#end()
