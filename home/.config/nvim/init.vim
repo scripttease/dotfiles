@@ -41,9 +41,14 @@ set ruler              " show the cursor position all the time
 set number             " show line numbers
 set showcmd            " display incomplete commands
 set clipboard+=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed.
+" set clipboard=unnamedplus  " makes copy and paste to OS clipboard once xclip is installed.
+set clipboard^=unnamed,unnamedplus  " makes copy and paste to OS clipboard once xclip is installed. Now cross-platform
 
 " Faster keypattern to move between open and close braces
 nnoremap % ~
+
+
+
 
 " Nicer split navigation
 nnoremap <C-h> <C-w>h
@@ -136,6 +141,7 @@ let g:snips_author="Alice Dee"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:NERDTreeWinSize=15
 
 function! RubocopThisFile()
   :! rubocop -aD %

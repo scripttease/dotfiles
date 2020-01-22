@@ -88,6 +88,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias n='nvim'
+alias a='alacritty'
 
 alias be='bundle exec'
 alias ber='bundle exec rake'
