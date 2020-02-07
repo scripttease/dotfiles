@@ -121,7 +121,7 @@ if [ -f "/usr/share/autojump/autojump.sh" ]; then
 fi
 
 # asdf version manager
-if [ -d "$HOME/.asdf/asdf.sh" ]; then
+if [ -d "$HOME/.asdf" ]; then
   source "$HOME/.asdf/asdf.sh"
 fi
 
@@ -147,6 +147,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by Anaconda3 5.2.0 installer
 export PATH="/anaconda3/bin:$PATH"
-
-# exec fish
-

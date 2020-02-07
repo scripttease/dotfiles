@@ -86,5 +86,9 @@
             "name": "Vue Green",
             "value": "#42b883"
         }
-    ]
+    ],
+    "editor.wordWrap": "on",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
