@@ -147,3 +147,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by Anaconda3 5.2.0 installer
 export PATH="/anaconda3/bin:$PATH"
+
+# Rust support
+export PATH="$HOME/.cargo/bin:$PATH"
