@@ -95,6 +95,13 @@ alias ber='bundle exec rake'
 alias berc='bundle exec rails console'
 alias beg='bundle exec guard'
 
+# Git aliases
+alias g='git'
+alias ga='git add --all && git status'
+alias gs='git status'
+alias gd='git diff'
+alias gci='git commit'
+
 # Docker aliases
 alias get-docker-postgres="docker run -t -d -p 5432:5432 --name postgres postgres"
 
