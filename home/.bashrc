@@ -147,6 +147,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/bin/node-dir/bin:$PATH"
 export PATH="$HOME/.homesick/repos/homeshick/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.cache/rebar3/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
