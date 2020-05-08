@@ -35,8 +35,16 @@
             "before": ["<C-h>"],
             "after": ["<C-w>", "h"]
         },
+        {
+            "before": ["g", "t"],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag"
+                }
+            ]
+        }
     ],
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Monokai++",
     "window.zoomLevel": 0,
     "editor.tabCompletion": true,
     // The number of spaces a tab is equal to. This setting is overridden

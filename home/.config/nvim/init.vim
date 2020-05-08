@@ -32,6 +32,9 @@ call plug#end()
 " allow mouse scroll to work
 set mouse=a
 
+" spell languages
+set spelllang=en
+
 " to set backup directory on new install, mkdir -p ~/.local/share/nvim/tmp
 set backupdir=~/.local/share/nvim/tmp   "set backup directory
 
@@ -47,8 +50,13 @@ set clipboard^=unnamed,unnamedplus  " makes copy and paste to OS clipboard once 
 " Faster keypattern to move between open and close braces
 nnoremap % ~
 
+" Spell check shortcut
+nnoremap :spp<cr> :set spell!<cr>
+nnoremap :nos<cr> :set nospell<cr>
 
-
+" Move between spellings
+nnoremap <C-[> [s
+nnoremap <C-]> ]s
 
 " Nicer split navigation
 nnoremap <C-h> <C-w>h
@@ -84,6 +92,12 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 
+" Smart case insensitive search
+set ignorecase
+set smartcase
+
+" / searches before hitting enter
+set incsearch
 
 " Don't use Ex mode, use Q for formatting
 noremap Q gq
