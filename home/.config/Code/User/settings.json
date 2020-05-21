@@ -44,7 +44,7 @@
             ]
         }
     ],
-    "workbench.colorTheme": "Monokai++",
+    "workbench.colorTheme": "Noctis Lilac",
     "window.zoomLevel": 0,
     "editor.tabCompletion": true,
     // The number of spaces a tab is equal to. This setting is overridden
@@ -117,5 +117,6 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "files.autoSave": "onWindowChange"
 }

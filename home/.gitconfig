@@ -1,6 +1,6 @@
 [user]
-  name = Alice Dee
-  email = alice.dee@guardian.co.uk
+  name = Al Dee
+  email = amyalicedee@gmail.com
 [core]
   excludesfile = ~/.gitignore
 
@@ -16,7 +16,6 @@
   st = status
   g = grep --break --heading --line-number
   gi = grep --break --heading --line-number --ignore-case
-  files-ive-edited = !git log --no-merges --stat --author='Alice Dee' --name-only --pretty=format:"" | sort -u | tail -n +2
   cleanup = "!git branch --merged | grep -v \"\\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d"
   fpp = "!git st | fpp"
   git = "!git"
