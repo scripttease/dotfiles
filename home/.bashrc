@@ -97,9 +97,11 @@ alias beg='bundle exec guard'
 
 # Git aliases
 alias g='git'
-alias ga='git add --all && git status'
+alias ga='git add'
+alias gas='git add --all && git status'
 alias gs='git status'
 alias gd='git diff'
+alias gco='git checkout'
 alias gci='git commit'
 
 # Docker aliases
