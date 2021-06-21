@@ -28,12 +28,27 @@ alias serve='echo "ruby -run -e httpd . -p 4000" && ruby -run -e httpd . -p 4000
 # Start autojump on Debian
 if [ -f "/usr/share/autojump/autojump.sh" ]; then
   source /usr/share/autojump/autojump.sh
+
 fi
+
+# autojump
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # asdf version manager
 if [ -d "$HOME/.asdf" ]; then
   source "$HOME/.asdf/asdf.sh"
 fi
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats 'on branch %b'
+ 
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 export EDITOR=nvim
 
