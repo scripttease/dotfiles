@@ -39,6 +39,11 @@ if [ -d "$HOME/.asdf" ]; then
   source "$HOME/.asdf/asdf.sh"
 fi
 
+# prompt color and style
+autoload -Uz promptinit
+promptinit
+prompt pure
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -47,8 +52,8 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats 'on branch %b'
  
 # Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
-PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
+# setopt PROMPT_SUBST
+# PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 export EDITOR=nvim
 

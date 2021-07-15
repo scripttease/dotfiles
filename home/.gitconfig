@@ -19,3 +19,10 @@
   cleanup = "!git branch --merged | grep -v \"\\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d"
   fpp = "!git st | fpp"
   git = "!git"
+
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
