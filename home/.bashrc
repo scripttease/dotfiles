@@ -160,3 +160,4 @@ export PATH="/anaconda3/bin:$PATH"
 
 # Rust support
 export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
